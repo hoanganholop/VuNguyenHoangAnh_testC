@@ -12,7 +12,7 @@ bool isPrime(int n) {
 
 int main(){
 	int n;
-	int arr[n];
+	int arr[100];
 	int choice;
 	int max=0;
 	while(1){
@@ -111,7 +111,21 @@ int main(){
 				}
 				break;
 			case 8: //Tim kiem vi tri phan tu(nguoi dung nhap) va in ra vi tri index cua phan tu do
-			        
+			    int findIndex;
+			    int found;
+				printf("Nhap phan tu can tim: ");
+				scanf("%d",&findIndex);
+				found=0;
+				for(int i=0;i<n;i++){
+					if(arr[i]==findIndex){
+						printf("Phan tu can tim o vi tri: %d", i);
+						found=1;
+					}
+				}
+				if(found!=1){
+					printf("Phan tu can tim khong ton tai trong mang");
+				}   
+				break; 
 		    default:
 			    printf("Lua chon khong hop le hay chon lai.\n");
 				break;    
