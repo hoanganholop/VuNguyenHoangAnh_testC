@@ -55,14 +55,14 @@ int main(){
 				}
 				printf("Phan tu lon nhat trong mang la: %d", max);
 				break;
-		    case 4: //In ra cac phan tu la so nguyen to
-		        printf("Cac phan tu la so nguyen to la: ");
-                for (int i=0;i<n;i++) {
-                    if (isPrime(arr[i])) {
-                        printf("%d ", arr[i]);
-                    }
-				}
-				break;
+			case 4: //In ra cac phan tu la so nguyen to
+			        printf("Cac phan tu la so nguyen to la: ");
+		                for (int i=0;i<n;i++) {
+		                    if (isPrime(arr[i])) {
+		                        printf("%d ", arr[i]);
+		                    }
+						}
+					break;
 			case 5: //Them 1 phan tu vao trong mang
 			    if(n>=100){
 			    	printf("Mang da day khong the them");
@@ -85,16 +85,16 @@ int main(){
 				break;
 			case 6: //Xoa mot phan tu trong mang
 			    printf("Nhap vi tri can xoa (0 den %d): ", n-1);
-                scanf("%d", &position);
-                if (position < 0 || position > n) {
-                    printf("Vi tri khong hop le.\n");
-                    break;
-                }
-                for (int i=position;i<n-1;i++) {
-                    arr[i]=arr[i + 1];
-                }
-                n--;
-                break;
+               			 scanf("%d", &position);
+              		 	 if (position < 0 || position > n) {
+                   		 printf("Vi tri khong hop le.\n");
+                    		break;
+		                }
+		                for (int i=position;i<n-1;i++) {
+		                    arr[i]=arr[i + 1];
+		                }
+		                n--;
+		                break;
 			case 7: //Sap xep mang theo thu tu tang dan
 			    printf("Mang sau khi duoc sap xep la: ");
 				for(int i=0;i<n-1;i++){
