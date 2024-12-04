@@ -52,7 +52,7 @@ int main(){
                         }
                     }
                 }
-                printf("\nTich cac phan tu tren duong bien: %d\n", result);
+                printf("\nTich cac phan tu tren duong bien: %lld\n", result);
                 break;
 			case 4:
 				printf("Cac phan tu nam tren duong cheo chinh: ");
