@@ -70,8 +70,6 @@ int main(){
                 break;
 			case 6:
 			    int temp;
-				int size;
-				size = sizeof(arr)/sizeof(arr[0][0]);
 			    printf("Cac phan tu nam tren duong cheo chinh sap xep theo thu tu tang dan: ");
                 int diagonal[100];
                
@@ -91,7 +89,7 @@ int main(){
                 arr[i][i] = diagonal[i];
                 }
                 for(int i=0;i<n;i++){
-    	        printf("%d",arr[i][i]);
+    	        printf("%5d",arr[i][i]);
 	            }
 	            printf("\n");
                 break;
