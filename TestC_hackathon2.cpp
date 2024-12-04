@@ -68,7 +68,33 @@ int main(){
                 }
                 printf("\n");
                 break;
-				
+			case 6:
+			    int temp;
+				int size;
+				size = sizeof(arr)/sizeof(arr[0][0]);
+			    printf("Cac phan tu nam tren duong cheo chinh sap xep theo thu tu tang dan: ");
+                int diagonal[100];
+               
+                for (int i = 0; i < n; ++i) {
+                    diagonal[i] = arr[i][i];
+                }
+                for (int i = 0; i < n- 1; ++i) {
+                    for (int j = 0; j < n - i - 1; ++j) {
+                       if (diagonal[j] > diagonal[j + 1]) {
+                       int temp = diagonal[j];
+                       diagonal[j] = diagonal[j + 1];
+                       diagonal[j + 1] = temp;
+                       }
+                    }
+                }
+                for (int i = 0; i < n; ++i) {
+                arr[i][i] = diagonal[i];
+                }
+                for(int i=0;i<n;i++){
+    	        printf("%d",arr[i][i]);
+	            }
+	            printf("\n");
+                break;
 			case 7:	
 			    int findIndex;
 			    int found;
