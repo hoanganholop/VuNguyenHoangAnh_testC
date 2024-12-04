@@ -47,66 +47,66 @@ int main(){
 				result=1;
 				printf("Cac phan tu nam tren duong bien la:");
 				for (int i = 0; i < rows; i++) {
-                    for (int j = 0; j < cols; j++) {
-                        if (i == 0 || i == rows - 1 || j == 0 || j == cols - 1) {
-                            printf("%d ", arr[i][j]);
-                            result *= arr[i][j];
-                        }
-                    }
-                }
-                printf("\nTich cac phan tu tren duong bien: %d\n", result);
-                break;
+		                    for (int j = 0; j < cols; j++) {
+		                        if (i == 0 || i == rows - 1 || j == 0 || j == cols - 1) {
+		                            printf("%d ", arr[i][j]);
+		                            result *= arr[i][j];
+		                        }
+		                    }
+		                }
+		                printf("\nTich cac phan tu tren duong bien: %d\n", result);
+		                break;
 			case 4:
 				if(rows!=cols){
 					printf("So hang va so cot khong bang nhau nen khong co duong cheo chinh");
 					break;
 				}
 				printf("Cac phan tu nam tren duong cheo chinh: ");
-                for (int i = 0; i < rows; i++) {
-                    printf("%d ", arr[i][i]);
-                }
-                printf("\n");
-                break;
+		                for (int i = 0; i < rows; i++) {
+		                    printf("%d ", arr[i][i]);
+		                }
+		                printf("\n");
+		                break;
 			case 5:
 				if(rows!=cols){
 					printf("So hang va so cot khong bang nhau nen khong co duong cheo phu");
 					break;
 				}
 				printf("Cac phan tu nam tren duong cheo phu: ");
-                for (int i = 0; i < rows; i++) {
-                    printf("%d ", arr[i][rows-i-1]);
-                }
-                printf("\n");
-                break;
+		                for (int i = 0; i < rows; i++) {
+		                    printf("%d ", arr[i][rows-i-1]);
+		                }
+		                printf("\n");
+		                break;
 			case 6:
 				if(rows!=cols){
 					printf("So hang va so cot khong bang nhau nen khong co duong cheo chinh");
 					break;
 				}
 				int temp;
-                int arr2[100];
-               
-                for (int i = 0; i < rows; ++i) {
-                    arr2[i] = arr[i][i];
-                }
-                for (int i = 0; i < rows- 1; ++i) {
-                    for (int j = 0; j < rows - i - 1; ++j) {
-                       if (arr2[j] > arr2[j + 1]) {
-                       int temp = arr2[j];
-                       arr2[j] = arr2[j + 1];
-                       arr2[j + 1] = temp;
-                       }
-                    }
-                }
-                for (int i = 0; i < rows; ++i) {
-                arr[i][i] = arr2[i];
-                }
-                printf("Cac phan tu nam tren duong cheo chinh sap xep theo thu tu tang dan: ");
-                for(int i=0;i<rows;i++){
-    	        printf("%5d",arr[i][i]);
-	            }
-	            printf("\n");
-                break;	
+		                int arr2[100];
+		               
+		                for (int i = 0; i < rows; ++i) {
+		                    arr2[i] = arr[i][i];
+		                }
+		                for (int i = 0; i < rows- 1; ++i) {
+		                    for (int j = 0; j < rows - i - 1; ++j) {
+		                       if (arr2[j] > arr2[j + 1]) {
+		                       int temp = arr2[j];
+		                       arr2[j] = arr2[j + 1];
+		                       arr2[j + 1] = temp;
+		                       }
+		                    }
+		                }
+		                for (int i = 0; i < rows; ++i) {
+		                arr[i][i] = arr2[i];
+		                }
+		                printf("Cac phan tu nam tren duong cheo chinh sap xep theo thu tu tang dan: ");
+		                for(int i=0;i<rows;i++){
+		    	        printf("%5d",arr[i][i]);
+			            }
+			            printf("\n");
+		                break;	
 			case 7:	
 			    int findIndex;
 			    int found;
